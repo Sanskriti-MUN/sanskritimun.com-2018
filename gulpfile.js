@@ -7,7 +7,7 @@ const surge = require("gulp-surge");
 gulp.task('pug', function() {
 	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
 	.pipe(pug())
-	.pipe(gulp.dest('dist/'));
+	.pipe(gulp.dest('dist'));
 })
 
 gulp.task('stylus', function() {
@@ -18,12 +18,12 @@ gulp.task('stylus', function() {
 	.pipe(autoprefix({
 		cascade: false
 	}))
-	.pipe(gulp.dest('dist/css'));
+	.pipe(gulp.dest('dist/assets/css'));
 })
 
 gulp.task('deploy', function() {
 	return surge({
-		project: './',
+		project: './dist',
 		domain: 'smun.surge.sh'
 	})
 })
