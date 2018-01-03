@@ -1,17 +1,17 @@
-nav
+nav.flex
 
-    .wrap
+	.wrap.flex
 
-        .right
+		.right.flex
+				
+			a(href="/").flex
 
-            img(src="/assets/img/logo.svg")
+				img(src="/assets/img/logo-silhouette.png")
 
-            h1 Sanskriti MUN
+		.left.flex
 
-        .left
+			ul.flex
 
-            ul
-
-                each link in ['Register', 'Secretariat', 'Committees', 'Guides', 'Contact']
-                    li
-                        a(data-link=link.toLowerCase())= link
+				each link in ['Register', 'Secretariat', 'Committees', 'Guides', 'Contact']
+					li.flex
+						a(data-link=link.toLowerCase())= link
