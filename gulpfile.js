@@ -3,6 +3,7 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
+const ts = require("gulp-typescript")
 
 gulp.task('pug', function() {
 	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
@@ -21,6 +22,15 @@ gulp.task('stylus', function() {
 	.pipe(gulp.dest('dist/assets/css'));
 })
 
+gulp.task('scripts', function() {
+	return gulp.src('src/ts/*.ts')
+	.pipe(ts({
+		outFile: "scripts.js",
+		removeComments: true
+	}))
+	.pipe(gulp.dest('dist/assets/js'))
+})
+
 gulp.task('deploy', function() {
 	return surge({
 		project: './dist',
@@ -28,10 +38,6 @@ gulp.task('deploy', function() {
 	})
 })
 
-gulp.task('deployWatch', ['pug', 'stylus', 'deploy'], function() {
-	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl'], ['pug', 'stylus', 'deploy']);
-})
-
-gulp.task('default', ['pug', 'stylus'], function () {
-	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl'], ['pug', 'stylus']);
+gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
+	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/ts/*.ts'], ['pug', 'stylus', 'scripts']);
 })
