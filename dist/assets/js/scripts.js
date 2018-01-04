@@ -1,8 +1,8 @@
 var header = document.querySelector('nav');
-var black = "#ff5722e3";
+var orange = "#ffa500f7";
 window.addEventListener('scroll', function () {
     if (window.scrollY >= 100) {
-        header.style.background = black;
+        header.style.background = orange;
     }
     else {
         header.style.background = "transparent";
