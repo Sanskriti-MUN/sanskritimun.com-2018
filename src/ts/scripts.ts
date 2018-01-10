@@ -1,4 +1,4 @@
-let header: Node = document.querySelector('nav');
+let header: String = <HTMLElement>document.querySelector('nav');
 let orange: String = "#ffa500f7";
 
 window.addEventListener('scroll', function() {
