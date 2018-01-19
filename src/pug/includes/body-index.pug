@@ -34,13 +34,73 @@ section.wrap
 			
 			.links.flex
 
-				each link in ['Notices', 'Matrices', 'Guides', 'Allotments']
+				each link in ['Matrices', 'Guides', 'Allotments']
 					.link
 						
 			.upper-secretariat
 
+				.wrap.flex
+
+					h1 Secretariat
+
+					.images.flex
+
+						.card.flex
+
+							img(src="/assets/img/sec/lusha.jpg")
+
+							h2 Lusha Jetley
+
+							h3 Secretary General
+
+						.card.flex
+
+							img(src="/assets/img/sec/gautham.jpg")
+
+							h2 Gautham Shiva Sreeji
+
+							h3 Under Secretery General
+
+						.card.flex
+
+							img(src="/assets/img/sec/jahnavi.jpg")
+
+							h2 Jahnavi Sodhi
+
+							h3 Director General &mdash; General Assembly
+
+						.card.flex
+
+							img(src="/assets/img/sec/rahul.jpg")
+
+							h2 Rahul Sharma
+
+							h3 Director General &mdash; Crisis
+
+						.card.flex
+
+							img(src="/assets/img/sec/shreya.jpg")
+
+							h2 Shreya Singh
+
+							h3 Director General &mdash; Conference
+
 			.committees
 
-			.contact
+				h1 Committees
+
+				.wrap.flex
+
+					- var committees = ["Social, Humanitarian, and Cultural Committee", "Disarmament and International Security", "All India Political Parties Meet", "League of Arab States", "United Nations Special Committee on Palestine, 1947", "Joint Crisis Committee", "United Nations Security Council", "United Nations Correspondents Association", "Photography"];
+					- var abbr = ["sochum", "disec", "aippm", "arableague", "unscop", "jcc", "unsc", "unca", "photography"]
+					- var i = 0
+
+					while i < abbr.length
+
+						.card.flex
+
+							img(src="/assets/img/committees/" + abbr[i] + ".jpg")
+
+							h2= committees[i++]
 
 	section.footer
