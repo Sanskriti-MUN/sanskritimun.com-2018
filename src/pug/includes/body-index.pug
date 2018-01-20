@@ -92,21 +92,23 @@ section.wrap
 							h3 Director General &mdash; Conference
 
 			.committees
-
-				h1 Committees
-
+				
 				.wrap.flex
+
+					h1 Committees
+
 
 					- var committees = ["Social, Humanitarian, and Cultural Committee", "Disarmament and International Security", "All India Political Parties Meet", "League of Arab States", "United Nations Special Committee on Palestine, 1947", "Joint Crisis Committee", "United Nations Security Council", "United Nations Correspondents Association", "Photography"];
 					- var abbr = ["sochum", "disec", "aippm", "arableague", "unscop", "jcc", "unsc", "unca", "photography"]
 					- var i = 0
 
-					while i < abbr.length
+					.committeeWrap.flex
 
-						.card.flex
+						while i < abbr.length
+							.card.flex
 
-							img(src="/assets/img/committees/" + abbr[i] + ".jpg")
+								img(src="/assets/img/committees/" + abbr[i] + ".jpg")
 
-							h2= committees[i++]
+								h2= committees[i++]
 
 	section.footer
