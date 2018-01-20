@@ -34,8 +34,14 @@ section.wrap
 			
 			.links.flex
 
-				each link in ['Matrices', 'Guides', 'Allotments']
-					.link
+				- var links = ['Matrices', 'Guides', 'Allotments', 'world', 'folder', 'flag']
+				- var i = 0
+				while i < 3
+					a.flex
+
+						span(class="ion-ios-"+links[i+3]+"-outline")
+
+						h2= links[i++]
 						
 			.upper-secretariat
 
