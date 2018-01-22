@@ -39,11 +39,17 @@ section.main
 				font-family "Oswald"
 				letter-spacing 2px
 				background rgba(0, 0, 0, 0.3)
+
+				@media only screen and (max-width: 768px)
+					font-size 2.3em
 			
 			h2
 				font-size 2.5em
 				text-align center
 				font-family "Oswald"
+
+				@media only screen and (max-width: 768px)
+					font-size 2em
 	
 	div.content
 		width 100%
@@ -82,25 +88,31 @@ section.main
 		.links
 			max-width 500px
 			width 100%
-			height 15vh
+			height 20vh
 			margin 0 auto
+			background #fff
 
 			a
 				width 100%
 				height 100%
 				cursor pointer
 				flex-direction column
-				justify-content space-around
+				justify-content center
 				color golden
 				transition 0.3s all
 				border-radius 10px 10px 0 0
+				text-align center
 
 				span 
 					font-size 2.9em
 
 				h2
 					font-weight 200
+					margin 10px 0 0 0
 					font-size 1.2em
+
+					@media only screen and (max-width: 700px)
+						margin 0
 				
 				&:hover
 					background golden 
@@ -153,6 +165,25 @@ section.main
 							font-size 1.1em
 							color #ddd
 							font-weight 100
+						
+						@media only screen and (max-width: 700px)
+							width 100%
+				
+				button 
+					border 1px solid golden 
+					padding 20px 30px
+					margin 20px 0
+					color golden
+					background transparent
+					border-radius 10px
+					font-size 20px
+					cursor pointer
+					transition 0.3s all
+					font-family "Alegreya Sans"
+
+					&:hover
+						background golden
+						color #222
 		
 		.committees
 			width 100%
@@ -197,3 +228,6 @@ section.main
 							color #444
 							font-weight 500
 							padding 20px 0 10px
+						
+						@media only screen and (max-width: 700px)
+							width 100%

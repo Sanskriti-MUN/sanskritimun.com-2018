@@ -34,16 +34,19 @@ section.wrap
 			
 			.links.flex
 
-				- var links = ['Matrices', 'Guides', 'Allotments', 'world', 'folder', 'flag']
-				- var i = 0
-				while i < 3
 					a.flex
 
-						span(class="ion-ios-"+links[i+3]+"-outline")
+						span.ion-ios-folder-outline
 
-						h2= links[i++]
+						h2 Committee Resources
+
+					a.flex
+
+						span.ion-ios-flag-outline
+
+						h2 Allotments
 						
-			.upper-secretariat
+			.upper-secretariat#upper-secretariat
 
 				.wrap.flex
 
@@ -90,8 +93,10 @@ section.wrap
 							h2 Shreya Singh
 
 							h3 Director General &mdash; Conference
+					
+					button(onclick="location.href='/secretariat.html'") More
 
-			.committees
+			.committees#committees
 				
 				.wrap.flex
 
@@ -110,12 +115,6 @@ section.wrap
 								img(src="/assets/img/committees/" + abbr[i] + ".jpg")
 
 								h2= committees[i++]
-
-	section.modals
-
-
-
-
 	//- section.footer
 
 		h1 Contact
