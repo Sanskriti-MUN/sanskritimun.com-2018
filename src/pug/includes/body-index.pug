@@ -51,7 +51,7 @@ section.wrap
 
 					.images.flex
 
-						.card.flex
+						.card.flex(data-upper="0")
 
 							img(src="/assets/img/sec/lusha.jpg")
 
@@ -59,7 +59,7 @@ section.wrap
 
 							h3 Secretary General
 
-						.card.flex
+						.card.flex(data-upper="1")
 
 							img(src="/assets/img/sec/gautham.jpg")
 
@@ -67,7 +67,7 @@ section.wrap
 
 							h3 Under Secretery General
 
-						.card.flex
+						.card.flex(data-upper="2")
 
 							img(src="/assets/img/sec/jahnavi.jpg")
 
@@ -75,7 +75,7 @@ section.wrap
 
 							h3 Director General &mdash; General Assembly
 
-						.card.flex
+						.card.flex(data-upper="3")
 
 							img(src="/assets/img/sec/rahul.jpg")
 
@@ -83,7 +83,7 @@ section.wrap
 
 							h3 Director General &mdash; Crisis
 
-						.card.flex
+						.card.flex(data-upper="4")
 
 							img(src="/assets/img/sec/shreya.jpg")
 
@@ -105,10 +105,25 @@ section.wrap
 					.committeeWrap.flex
 
 						while i < abbr.length
-							.card.flex
+							.card.flex(data-committee=i)
 
 								img(src="/assets/img/committees/" + abbr[i] + ".jpg")
 
 								h2= committees[i++]
 
-	section.footer
+	section.modals
+
+
+
+
+	//- section.footer
+
+		h1 Contact
+
+		.wrap
+
+			.email
+
+			.phone
+
+			.address

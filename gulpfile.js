@@ -23,11 +23,7 @@ gulp.task('stylus', function() {
 })
 
 gulp.task('scripts', function() {
-	return gulp.src('src/ts/*.ts')
-	.pipe(ts({
-		outFile: "scripts.js",
-		removeComments: true
-	}))
+	return gulp.src('src/ts/*.js')
 	.pipe(gulp.dest('dist/assets/js'))
 })
 
@@ -39,5 +35,5 @@ gulp.task('deploy', function() {
 })
 
 gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
-	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/ts/*.ts'], ['pug', 'stylus', 'scripts']);
+	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/ts/*.js'], ['pug', 'stylus', 'scripts']);
 })
