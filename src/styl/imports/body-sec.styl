@@ -1,0 +1,45 @@
+section.wrap
+    height 100%
+    width 100%
+    background #222
+
+    section.main
+        width 90%
+        max-width 1000px
+        margin 0 auto
+
+        h1
+            font-family "Alegreya Sans"
+            font-size 300%
+            padding 50px 0
+            text-align center
+            color golden
+            font-weight 500
+
+        .sec
+            width 90%
+            flex-wrap wrap
+            justify-content space-around
+            align-items center
+            margin 0 auto
+
+            .card
+                flex-direction column
+                width 40%
+                margin 20px 0
+                text-align center
+                justify-content flex-start
+
+                img
+                    width 80%
+                    height auto
+                    box-shadow 0 0 30px #111
+
+                h2
+                    font-size 1.2em
+                    color #444
+                    font-weight 500
+                    padding 20px 0 10px
+                
+                @media only screen and (max-width: 700px)
+                    width 100%
