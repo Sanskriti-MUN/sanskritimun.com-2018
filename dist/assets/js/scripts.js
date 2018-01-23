@@ -1,13 +1,16 @@
-var header = document.querySelector('nav');
-var orange = "#ffa500f7";
-window.addEventListener('scroll', function () {
-	if (window.scrollY >= 200) {
-		header.style.background = orange;
-	}
-	else {
-		header.style.background = "transparent";
-	}
-});
+if (change_color) {
+	var header = document.querySelector('nav');
+	var orange = "#ffa500f7";
+	header.style.background = "transparent";
+	window.addEventListener('scroll', function () {
+		if (window.scrollY >= 200) {
+			header.style.background = orange;
+		}
+		else {
+			header.style.background = "transparent";
+		}
+	});
+}
 
 var end = new Date('04/25/2018 0:0 AM');
 

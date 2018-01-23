@@ -1,3 +1,5 @@
+@import "navigation"
+
 section.wrap
 	height 100%
 	width 100%
@@ -7,21 +9,32 @@ section.wrap
 		width 90%
 		max-width 1000px
 		margin 0 auto
+		padding 8vh 0
 
 		h1
 			font-family "Alegreya Sans"
 			font-size 300%
-			padding 50px 0
+			padding 30px 0 40px 0
 			text-align center
 			color golden
 			font-weight 500
 			border-bottom 2px solid
+			margin-bottom 20px
+
+			@media only screen and (max-width: 800px)
+				font-size 230%
+				padding 50px 0 20px 0
+				margin-bottom 20px
 
 		h2
 			font-weight 500
 			font-size 230%
 			padding 30px 0
 			color golden
+
+			@media only screen and (max-width: 800px)
+				font-size 200%
+				padding 20px 0 0 0
 
 		p
 			width 100%
