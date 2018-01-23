@@ -65,14 +65,17 @@ section.main
 			justify-content space-around
 			align-items flex-start
 			
-			@media only screen and (max-width: 768px)
+			@media only screen and (max-width 1100px)
 				flex-direction column-reverse
-				align-items center	
+				align-items center
 			
 			.updates
 				width 250px
 				flex-direction column
 				margin 70px 0 0 0
+
+				@media only screen and (max-width 1100px)
+					margin 0 0 50px 0
 				
 				& > div
 					border-bottom 2px solid golden
@@ -109,6 +112,12 @@ section.main
 								font-size 17px
 								color #222
 
+				&#pseudo
+					visibility none
+				
+					@media only screen and (max-width: 1500px)
+						display none
+
 			.wrap
 				width 90%
 				max-width 768px
@@ -116,12 +125,18 @@ section.main
 				justify-content space-around
 				flex-direction column
 
+				@media only screen and (max-width 800px)
+					padding 20px 0 0 0
+
 				h1
 					font-size 2.9em
 					color golden
 					padding 20px 0
 					font-weight 300
 					width 100%
+
+					@media only screen and (max-width 800px)
+						font-size 2.6em
 				
 				p
 					width 100%
@@ -132,6 +147,12 @@ section.main
 					text-align justify
 					letter-spacing 1px
 					font-weight 300
+
+					@media only screen and (max-width 800px)
+						font-size 0.9em
+						line-height 1.5
+						text-align left
+						letter-spacing 0.7px
 				
 				.hr
 					width 100%

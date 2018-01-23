@@ -1,27 +1,41 @@
 var header = document.querySelector('nav');
 var orange = "#ffa500f7";
 window.addEventListener('scroll', function () {
-    if (window.scrollY >= 200) {
-        header.style.background = orange;
-    }
-    else {
-        header.style.background = "transparent";
-    }
+	if (window.scrollY >= 200) {
+		header.style.background = orange;
+	}
+	else {
+		header.style.background = "transparent";
+	}
 });
 
-var countTo = new Date('apr, 25, 2018, 20:54:00');
-var difference = (now - countTo);
-var days = Math.floor(difference/(86400000)*1);
-var hours = Math.floor((difference%(86400000))/(3600000)*1);
-var mins = Math.floor(((difference%(86400000))%(3600000))/(60000)*1);
-var secs = Math.floor((((difference%(86400000))%(3600000))%(60000))/1000*1);
-document.querySelector('.days p').innerHTML = days;
-document.querySelector('.hours p').innerHTML = hours;
-document.querySelector('.minutes p').innerHTML = mins;
-document.querySelector('.seconds p').innerHTML = secs;
-clearTimeout(upTime.to);
-upTime.to = setTimeout(function () {
-	var today = new Date();
-	now = today.getDate();
-	upTime(countTo);
-}, 1000);
+var end = new Date('04/25/2018 0:0 AM');
+
+var _second = 1000;
+var _minute = _second * 60;
+var _hour = _minute * 60;
+var _day = _hour * 24;
+var timer;
+
+function showRemaining() {
+	var now = new Date();
+	var distance = end - now;
+	if (distance < 0) {
+
+		clearInterval(timer);
+		document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+		return;
+	}
+	var days = Math.floor(distance / _day);
+	var hours = Math.floor((distance % _day) / _hour);
+	var minutes = Math.floor((distance % _hour) / _minute);
+	var seconds = Math.floor((distance % _minute) / _second);
+
+	document.querySelector('.days p').innerHTML = days;
+	document.querySelector('.hours p').innerHTML = hours;
+	document.querySelector('.minutes p').innerHTML = minutes;
+	document.querySelector('.seconds p').innerHTML = seconds;
+}
+
+timer = setInterval(showRemaining, 1000);
