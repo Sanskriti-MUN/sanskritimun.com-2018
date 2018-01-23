@@ -186,7 +186,7 @@ section.wrap
 
 							h3 Director General &mdash; Conference
 					
-					button(onclick="location.href='/secretariat.html'") More
+					//- button(onclick="location.href='/secretariat.html'") More
 
 			.committees#committees
 				
@@ -207,14 +207,44 @@ section.wrap
 								img(src="/assets/img/committees/" + abbr[i] + ".jpg")
 
 								h2= committees[i++]
-	//- section.footer
+	
+			section.footer.flex#contact
 
-		h1 Contact
+				h1 Contact
 
-		.wrap
+				.wrap.flex
 
-			.email
+					.email.flex
 
-			.phone
+						h2 Email
 
-			.address
+						a(href="mailto:contact@sanskritimun.in") contact@sanskritimun.in
+
+					.phone.flex
+						
+						h2 Phone
+
+						p
+							| Lusha Jetley, Secretary General:&nbsp;
+							a(href="tel:+919810172909") +919810172909
+						p
+							| Gautham Shiva Sreeji, Under-Secretary General:&nbsp;
+							a(href="tel:+918800531030") +918800531030
+						p
+							| Manisha Choudhury, MUN Coordinator:&nbsp;
+							a(href="tel:+919810501965") +919810501965
+
+					.address.flex
+						
+						h2 Address
+
+						p
+							| Sanskriti School
+							br
+							| Dr. S. Radhakrishnan Marg
+							br
+							| Chanakyapuri, New Delhi
+							br
+							| Delhi - 21
+							br
+							| India
