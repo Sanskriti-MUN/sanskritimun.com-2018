@@ -527,7 +527,8 @@ elseif(isset($_POST['submit-individual'])) {
 				</pre><br>
 				<p>Registration charges are not applicable for the Faculty Advisor</p>
 				<p style="padding-bottom:2%">The schools that require accommodation are requested to send a seperate mail to <a href="mailto:contact@sanskritimun.in">contact@sanskritimun.in</a></p>
-				<p style="padding-bottom:2%">Joint Crisis Committee and United Nations Correspondents Association forms to be downloaded, filled and emailed to the following email IDs &mdash; JCC <a href="mailto:jcc2018@sanskritimun.in">jcc2018@sanskritimun.in</a>, UNCA: <a href="mailto:unca2018@sanskritimun.in">unca2018@sanskritimun.in</a>.</p>
+				<p>Joint Crisis Committee and United Nations Correspondents Association forms to be downloaded, filled and emailed to the following email IDs &mdash; JCC <a href="mailto:jcc2018@sanskritimun.in">jcc2018@sanskritimun.in</a>, UNCA: <a href="mailto:unca2018@sanskritimun.in">unca2018@sanskritimun.in</a>.</p>
+				<p style="padding-bottom:2%">Those applying for JCC or Press please mention whether you are part of the school delegation.</p>
 			</div>
 			<h2>Please select the type of registration:</h2>
 			<a class="options" href='?type=school'>&rarr;&nbsp;&nbsp;School Delegation</a>
