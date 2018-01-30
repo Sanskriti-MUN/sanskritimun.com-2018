@@ -19,7 +19,7 @@ $headers .= "From: SMUN Registration Forms <forms@sanskritimun.in>"."\r\n";
 $headers .= "X-Sender: Sanskriti MUN < forms@sanskritimun.in >\n";
 $headers .= 'X-Mailer: PHP/' . phpversion();
 $header.= "X-Priority: 1\r\n";
-$to2 = "oc@sanskritimun.in";
+$to2 = "ocsmun2018@gmail.com";
 if(isset($_POST['submit-school'])) {
 	$school_name = $_POST['school-name'];
 	$school_address = $_POST['school-address'];
