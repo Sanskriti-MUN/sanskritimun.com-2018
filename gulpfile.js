@@ -3,7 +3,16 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
-const ts = require("gulp-typescript")
+const ts = require("gulp-typescript");
+const webserver = require("gulp-webserver");
+
+gulp.task('webserver', function() {
+	return gulp.src("dist")
+	.pipe(webserver({
+		livereload: true,
+		open: true
+	}))
+})
 
 gulp.task('pug', function() {
 	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
@@ -34,6 +43,6 @@ gulp.task('deploy', function() {
 	})
 })
 
-gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
+gulp.task('default', ['webserver', 'pug', 'stylus', 'scripts'], function () {
 	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/ts/*.js'], ['pug', 'stylus', 'scripts']);
 })
