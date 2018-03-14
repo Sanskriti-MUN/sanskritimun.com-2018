@@ -1,163 +1,58 @@
 section.wrap
 
-    section.main
+	include ./navigation.pug
 
-        h1 Secretariat &mdash; Sanskriti MUN '18
+	section.main
 
-        .sec.flex
+		h1 Secretariat &mdash; Sanskriti MUN '18
 
-            .card.flex
+		.sec.flex
 
-                img(src="/assets/img/")
+			each person in ["Abhisri Nath", "Agastya Pulapaka", "Agastya Singh", "Amogh Gyaneshwar", "Ananya Jain", "Ananya Sinha", "Bhavya Pandey", "Daya Mehrotra", "Diya Srivastava", "Gautham Shiva Sreeji", "Jahnavi Sodhi", "Lusha Jetley", "Madhav Lavakare", "Mihir Chaturvedi", "Nandini Sanyal", "Natasha Singh", "Rahul Sharma", "Sana Singh", "Shauryya Vira", "Shivam Nanda", "Shreya Singh", "Sugandhana Aluwalia", "Vasudha Thakur", "Vidisha Madan", "Zinnia Aurora"]
 
-                h2 
+				.card.flex
 
-            .card.flex
+					img(src="/assets/img/sec/" + person + ".jpg")
 
-                img(src="/assets/img/")
+					h2= person
+	
+	section.footer.flex#contact
 
-                h2 
+		h1 Contact
 
-            .card.flex
+		.wrap.flex
 
-                img(src="/assets/img/")
+			.email.flex
 
-                h2 
+				h2 Email
 
-            .card.flex
+				a(href="mailto:contact@sanskritimun.in") contact@sanskritimun.in
 
-                img(src="/assets/img/")
+			.phone.flex
+				
+				h2 Phone
 
-                h2 
+				p
+					| Lusha Jetley, Secretary General:&nbsp;
+					a(href="tel:+919810172909") +919810172909
+				p
+					| Gautham Shiva Sreeji, Under-Secretary General:&nbsp;
+					a(href="tel:+918800531030") +918800531030
+				p
+					| Manisha Choudhury, MUN Coordinator:&nbsp;
+					a(href="tel:+919810501965") +919810501965
 
-            .card.flex
+			.address.flex
+				
+				h2 Address
 
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
-
-            .card.flex
-
-                img(src="/assets/img/")
-
-                h2 
+				p
+					| Sanskriti School
+					br
+					| Dr. S. Radhakrishnan Marg
+					br
+					| Chanakyapuri, New Delhi
+					br
+					| Delhi - 21
+					br
+					| India
