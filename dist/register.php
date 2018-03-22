@@ -1,11 +1,3 @@
-<!--
-
-(C) Sanskriti MUN 2018
-
-Designed, Developed and Coded by Mihir Chaturvedi (plibither8)
-
--->
-
 <?php
 
 /*********Mail Variables*********/
