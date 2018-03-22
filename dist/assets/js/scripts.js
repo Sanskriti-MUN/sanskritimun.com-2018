@@ -1,3 +1,4 @@
+// Change color of navbar onscroll
 if (change_color) {
 	var header = document.querySelector('nav');
 	var orange = "#ffa500f7";
@@ -12,8 +13,10 @@ if (change_color) {
 	});
 }
 
-var end = new Date('04/25/2018 0:0 AM');
 
+
+// Countdown
+var end = new Date('04/25/2018 0:0 AM');
 var _second = 1000;
 var _minute = _second * 60;
 var _hour = _minute * 60;

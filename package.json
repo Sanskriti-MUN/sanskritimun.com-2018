@@ -15,7 +15,6 @@
     "typescript": "^2.6.2"
   },
   "devDependencies": {
-    "gulp-typescript": "^3.2.3",
     "gulp-webserver": "^0.9.1"
   },
   "scripts": {

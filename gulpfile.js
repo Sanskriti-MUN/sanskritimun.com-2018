@@ -3,7 +3,6 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
-const ts = require("gulp-typescript");
 const webserver = require("gulp-webserver");
 
 gulp.task('webserver', function() {
@@ -16,24 +15,17 @@ gulp.task('webserver', function() {
 
 gulp.task('pug', function() {
 	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
-	.pipe(pug())
+	.pipe(pug({
+		pretty: true
+	}))
 	.pipe(gulp.dest('dist'));
 })
 
 gulp.task('stylus', function() {
 	return gulp.src('src/styl/*.styl')
-	.pipe(stylus({
-		compress: true
-	}))
-	.pipe(autoprefix({
-		cascade: false
-	}))
+	.pipe(stylus())
+	.pipe(autoprefix())
 	.pipe(gulp.dest('dist/assets/css'));
-})
-
-gulp.task('scripts', function() {
-	return gulp.src('src/ts/*.js')
-	.pipe(gulp.dest('dist/assets/js'))
 })
 
 gulp.task('deploy', function() {
@@ -43,6 +35,6 @@ gulp.task('deploy', function() {
 	})
 })
 
-gulp.task('default', ['webserver', 'pug', 'stylus', 'scripts'], function () {
-	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/ts/*.js'], ['pug', 'stylus', 'scripts']);
+gulp.task('default', ['webserver', 'pug', 'stylus'], function () {
+	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl'], ['pug', 'stylus']);
 })
