@@ -15,16 +15,18 @@ gulp.task('webserver', function() {
 
 gulp.task('pug', function() {
 	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
-	.pipe(pug({
-		pretty: true
-	}))
+	.pipe(pug())
 	.pipe(gulp.dest('dist'));
 })
 
 gulp.task('stylus', function() {
 	return gulp.src('src/styl/*.styl')
-	.pipe(stylus())
-	.pipe(autoprefix())
+	.pipe(stylus({
+		compress: true
+	}))
+	.pipe(autoprefix({
+		cascade: false
+	}))
 	.pipe(gulp.dest('dist/assets/css'));
 })
 
