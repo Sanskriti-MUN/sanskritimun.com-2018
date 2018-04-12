@@ -505,7 +505,8 @@ elseif(isset($_POST['submit-individual'])) {
 				<p>Delegate Fee -- Rs 3000 per delegate (This includes tea and lunch on all 3 days)<br>
 					School Registration Fee -- Rs 3500</p><br>
 				<p>Total Fee ( 3000 x No. of delegates + 3500)</p><br><br>
-				<p>The Cheque/ DD  should be drawn in favour of "Sanskriti School" payable at New Delhi. </p><br>
+				<p>The Cheque/ DD  should be drawn in favour of "Sanskriti School" payable at New Delhi.</p>
+				<p>Individual delegate's is non-refundable.</p><br>
 				<p>The Delegation Fee is to be sent to the following address (before 1.00pm, if hand-delivered):</p>
 				<pre>
 					Sanskriti School (MUN)<br>
