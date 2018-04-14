@@ -97,10 +97,29 @@ var electronicsPolicyModal = new tingle.modal({
 	}
 });
 
+var posPaperModal = new tingle.modal({
+	footer: true,
+	stickyFooter: false,
+	closeMethods: ['overlay', 'button', 'escape'],
+	closeLabel: "Close",
+	cssClass: ['modal'],
+	onOpen: function () {
+		console.log('modal open');
+	},
+	onClose: function () {
+		console.log('modal closed');
+	},
+	beforeClose: function () {
+		return true;
+		return false;
+	}
+});
+
 var resourcesEl = document.querySelectorAll("div.links a.flex");
 var secCards = document.querySelectorAll('div.upper-secretariat div.card');
 var commCards = document.querySelectorAll('div.committees div.card');
 var electronicsPolicyLink = document.querySelector('#e-policy');
+var posPaperLink = document.querySelector('#pos-paper');
 
 
 
@@ -186,3 +205,7 @@ resourcesEl[0].addEventListener("click", function() {resourcesModal.open()})
 electronicsPolicyModal.setContent("<h1>Electronics Policy</h1><p>Delegates are not allowed to use electronic devices while in committee. They are expected to print their research material and carry it. All paperwork submitted must also be handwritten, not typed (except for position paper). Usage of electronics in committee, unless in the case of emergency and permitted by the executive board, will result in disqualification from the awards process.</p>")
 
 electronicsPolicyLink.addEventListener("click", function() {electronicsPolicyModal.open()})
+
+posPaperModal.setContent("<h1>Position Paper Deadline</h1><p>Individual delegates who received their allotments by the 13th of April are to submit their position papers by <strong>18th April, 2018</strong></p><p>Individual delegates who received their allotments post 13th April may submit their position papers by <strong>24th April, 2018</strong></p>")
+
+posPaperLink.addEventListener("click", function() {posPaperModal.open()})
