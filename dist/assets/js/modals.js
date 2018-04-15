@@ -115,11 +115,49 @@ var posPaperModal = new tingle.modal({
 	}
 });
 
+var dressCodeModal = new tingle.modal({
+	footer: true,
+	stickyFooter: false,
+	closeMethods: ['overlay', 'button', 'escape'],
+	closeLabel: "Close",
+	cssClass: ['modal'],
+	onOpen: function () {
+		console.log('modal open');
+	},
+	onClose: function () {
+		console.log('modal closed');
+	},
+	beforeClose: function () {
+		return true;
+		return false;
+	}
+});
+
+var commEmailModal = new tingle.modal({
+	footer: true,
+	stickyFooter: false,
+	closeMethods: ['overlay', 'button', 'escape'],
+	closeLabel: "Close",
+	cssClass: ['modal'],
+	onOpen: function () {
+		console.log('modal open');
+	},
+	onClose: function () {
+		console.log('modal closed');
+	},
+	beforeClose: function () {
+		return true;
+		return false;
+	}
+});
+
 var resourcesEl = document.querySelectorAll("div.links a.flex");
 var secCards = document.querySelectorAll('div.upper-secretariat div.card');
 var commCards = document.querySelectorAll('div.committees div.card');
 var electronicsPolicyLink = document.querySelector('#e-policy');
 var posPaperLink = document.querySelector('#pos-paper');
+var dressCodeLink = document.querySelector('#dress-code');
+var commEmailLink = document.querySelector('#comm-email');
 
 
 
@@ -199,13 +237,16 @@ commCards[7].addEventListener("click", function () {commModals[7].open()})
 // Resources Modal
 
 resourcesModal.setContent("<h1>Background Guides</h1><li><a href='/assets/docs/bgg/sochum-bgg.pdf'>Social, Cultural and Humanitarian Committee</a></li><li><a href='/assets/docs/bgg/disec-bgg.pdf'>Disarmament and International Security Committee</a></li><li><a href='/assets/docs/bgg/unsc-bgg.pdf'>United Nations Security Council</a></li><li><a href='/assets/docs/bgg/unscop-bgg.pdf'>United Nations Special Committee on Palestine</a></li><li><a href='/assets/docs/bgg/aippm-bgg.pdf'>All India Political Parties Meet</a></li><li><a href='/assets/docs/bgg/arableague-bgg.pdf'>The Arab League</a></li><li><a href='/assets/docs/bgg/jcc-bgg.pdf'>Joint Crisis Cabinet</a></li><li><a href='/assets/docs/bgg/unca-bgg.pdf'>United Nations Correspondents Association</a></li><p>Note: Passwords to the background guides will be emailed to the delegates once the payment has been received.</p><h1>Matrices</h1><li><a href='https://docs.google.com/spreadsheets/d/16I9BV6eJia4kUK33YcktXbtMST_ODYEsJGTyjXsQiTA/'>Social, Cultural and Humanitarian Committee</a></li><li><a href='https://docs.google.com/spreadsheets/d/1yoV2hv45Dhhd-1GrpErg-ptiGB5ptjTtuOEBCxD6yrY/'>Disarmament and International Security Committee</a></li><li><a href='https://docs.google.com/spreadsheets/d/1eOOOiGjqyU2KRV4sln8_JkbJsPtu1F47pUJOXdxKIlI/'>United Nations Special Committee on Palestine</a></li><li><a href='https://docs.google.com/spreadsheets/d/1xBiJM9Ffr3CTlMNj36roZjX3AeI_WKibbUGxsUB2qTU'>All India Political Parties Meet</a></li><li><a href='https://docs.google.com/spreadsheets/d/1yFl7KP7ZEhzNIj732rrEObSq84S-7FoAm15IP-4vhJM'>The Arab League</a></li><li><a href='https://docs.google.com/spreadsheets/d/1LltqyAHcKNOkwqUbOa-y7_uLoSCqDyyaVGpt0gVRwH8/edit#gid=1091389609'>Joint Crisis Cabinet</li><li><a href='https://docs.google.com/spreadsheets/d/1BVt5IEMtss5F5ZxFqs2ypfdKExfTaf5i6QeB2VmdDuc/'>Security Council</a></li><li><a href='https://docs.google.com/spreadsheets/d/16ONAmNTERgHtghCpnMLm2JZTI052g7E5BEViz0Vb_VU/'>United Nations Correspondents Association</a></li>");
-
 resourcesEl[0].addEventListener("click", function() {resourcesModal.open()})
 
 electronicsPolicyModal.setContent("<h1>Electronics Policy</h1><p>Delegates are not allowed to use electronic devices while in committee. They are expected to print their research material and carry it. All paperwork submitted must also be handwritten, not typed (except for position paper). Usage of electronics in committee, unless in the case of emergency and permitted by the executive board, will result in disqualification from the awards process.</p>")
-
 electronicsPolicyLink.addEventListener("click", function() {electronicsPolicyModal.open()})
 
 posPaperModal.setContent("<h1>Position Paper Deadline</h1><p>Individual delegates who received their allotments by the 13th of April are to submit their position papers by <strong>18th April, 2018</strong></p><p>Individual delegates who received their allotments post 13th April may submit their position papers by <strong>24th April, 2018</strong></p>")
-
 posPaperLink.addEventListener("click", function() {posPaperModal.open()})
+
+dressCodeModal.setContent("<h1>Dress Code</h1><p>The dress code to be followed by Sanskriti MUN will be:</p><ul><li>Wednesday, 25th April: Western Formal</li><li>Thursday, 26th April: Indian</li><li>Friday, 27th April: Western Formal</li></ul><p>Nevertheless, the delegates are welcome to wear either Indian or western formals as they like.</p>")
+dressCodeLink.addEventListener("click", function() {dressCodeModal.open()})
+
+commEmailModal.setContent("<h1>Committee Email IDs</h1><p>Directly get in contact with your committee directors by mailing them to the respective email ID:</p><ul><li>SOCHUM: <a href='mailto:sochum2018@sanskritimun.in'>sochum2018@sanskritimun.in</a></li><li>DISEC: <a href='mailto:disec2018@sanskritimun.in'>disec2018@sanskritimun.in</a></li><li>UNSC: <a href='mailto:unsc2018@sanskritimun.in'>unsc2018@sanskritimun.in</a></li><li>UNSCOP: <a href='mailto:unscop2018@sanskritimun.in'>unscop2018@sanskritimun.in</a></li><li>League of Arab States: <a href='mailto:arableague2018@sanskritimun.in'>arableague2018@sanskritimun.in</a></li><li>JCC: <a href='mailto:jcc2018@sanskritimun.in'>jcc2018@sanskritimun.in</a></li><li>AIPPM: <a href='mailto:aippm2018@sanskritimun.in'>aippm2018@sanskritimun.in</a></li><li>UNCA: <a href='mailto:unca2018@sanskritimun.in'>unca2018@sanskritimun.in</a></li></ul>")
+commEmailLink.addEventListener("click", function() {commEmailModal.open()})
