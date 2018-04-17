@@ -427,7 +427,7 @@ elseif(isset($_POST['submit-individual'])) {
 			</form>
 			<?php
 						}
-						elseif($type=='individual') {
+						/* elseif($type=='individual') {
 			?>
 			<form method="post" action="register.php?exit">
 				<h2 class="type-title">Individual Delegate</h2>
@@ -486,8 +486,8 @@ elseif(isset($_POST['submit-individual'])) {
 				</div>
 				<input type=submit name="submit-individual" class="submit" value="submit">
 			</form>
-			<?php
-						} else {
+			<?php */
+						else {
 							echo '<script>window.location="/register.php"</script>';
 						}
 					} 
@@ -525,7 +525,7 @@ elseif(isset($_POST['submit-individual'])) {
 			</div>
 			<h2>Please select the type of registration:</h2>
 			<a class="options" href='?type=school'>&rarr;&nbsp;&nbsp;School Delegation</a>
-			<a class="options" href='?type=individual'>&rarr;&nbsp;&nbsp;Individual Delegate</a>
+			<!-- <a class="options" href='?type=individual'>&rarr;&nbsp;&nbsp;Individual Delegate</a> -->
 			<a class="options" href='/assets/docs/jcc-form.docx' download>&rarr;&nbsp;&nbsp;Joint Crisis Committee Form</a>
 			<a class="options" href='/assets/docs/unca-form.docx' download>&rarr;&nbsp;&nbsp;United Nations Correspondents Association Form</a>
 			<div style="height:10%;padding:1%;"></div>
